@@ -52,3 +52,5 @@ Antes de empezar hacer wireframe de students básico
 * Empezar mostrando el listado de alumnos
 * Crear modelo attendance
   ** Explicar belongs_to y has_many
+* Desplegar si el estudiante atendió o no
+* Crear forma para cambiar atendencia

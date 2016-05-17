@@ -19,7 +19,6 @@ class CourseSessionsController < ApplicationController
   private
 
   # No se si tocarlo
-  
   def course_session_parameters
     params.require(:course_session).permit(student_ids: [])
   end
