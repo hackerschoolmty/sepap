@@ -26,6 +26,12 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
+      <%- flash.each do |key, msg| %>
+        <div class="alert alert-<%= key %>">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <%= msg %>
+        </div>
+      <% end %>
       <div class="container">
         <h1>¡Bienvenidos!</h1>
         <p>Esta app es un intento de clon de SEPAP, sistema actual para la toma de asistencia de los profesores al taller impartido por la Hacker School Monterrey.</p>
