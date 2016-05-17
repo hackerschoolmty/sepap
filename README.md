@@ -1,4 +1,4 @@
-# Assistance App
+# Sepap App
 
 App que controla asistencias de alumnos en un grupo de clases
 
@@ -21,6 +21,8 @@ App que controla asistencias de alumnos en un grupo de clases
 
 ## Crear el app
 
+Antes de empezar hacer wireframe de students básico
+
 1. Scaffold Students
 
 * Explicar que es un recurso
@@ -40,5 +42,12 @@ App que controla asistencias de alumnos en un grupo de clases
 * Hacer acción index
 
 4. Crear vista course_sessions/index.html.erb
+
 * Explicar ERB básico
 * Explicar Rails link helpers básico
+* Hacer wireframe de toma de asistencia
+
+5. Crear accion course_sessions/show.html.erb
+
+* Empezar mostrando el listado de alumnos
+* Crear modelo sepap
