@@ -1,1 +1,26 @@
-show.html.erb
+<h1><%= @course_session.subject %></h1>
+
+<p>
+  Fecha: <strong><%= @course_session.date %></strong>
+</p>
+
+<%= form_for @course_session do |f| %>
+
+<table>
+  <thead>
+    <th>Nombre Completo</th>
+    <th>Asistencia</th>
+  </thead>
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student %></td>
+        <td><%= check_box_tag 'course_session[student_ids][]', student.id, @course_session.students.include?(student) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= f.submit "Guardar" %>
+
+<% end %>

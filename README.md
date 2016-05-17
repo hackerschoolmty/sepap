@@ -50,4 +50,5 @@ Antes de empezar hacer wireframe de students básico
 5. Crear accion course_sessions/show.html.erb
 
 * Empezar mostrando el listado de alumnos
-* Crear modelo sepap
+* Crear modelo attendance
+  ** Explicar belongs_to y has_many
