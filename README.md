@@ -5,28 +5,22 @@ App que controla asistencias de alumnos en un grupo de clases
 ## Pre-Explicación
 
 1. MVC
-
-* Analogía restaurante
-* URL: /controlador/accion
-
+  * Analogía restaurante
+  * URL: /controlador/accion
 2. Filosofía en Rails
-
-* ActiveRecord + ORM
-* Finders on Rails
-
+  * ActiveRecord + ORM
+  * Finders on Rails
 3. REST
-
-* Get / Post / Put / Delete
-* CRUD
+  * Get / Post / Put / Delete
+  * CRUD
 
 ## Crear el app
 
 Antes de empezar hacer wireframe de students básico
 
 1. Scaffold Students
-
-* Explicar que es un recurso
-* Explicar REST
+  * Explicar que es un recurso
+  * Explicar REST
 
 2. Modelo CourseSession
 
