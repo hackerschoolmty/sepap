@@ -1,12 +1,20 @@
-<h1><%= @course_session.subject %></h1>
+<div class="row">
+  <div class="col-md-6">
+    <h2><%= @course_session.subject %></h2>
+  </div>
+  <div class="col-md-6 text-right">
+    <br />
+  <p>
+    Fecha: <strong><%= @course_session.date %></strong>
+  </p>
+  <p>Mostrando <strong><%= pluralize(@students.count, "estudiante", "estudiantes") %></strong></p>
+  </div>
+</div>
 
-<p>
-  Fecha: <strong><%= @course_session.date %></strong>
-</p>
 
 <%= form_for @course_session do |f| %>
 
-<table>
+<table class="table table-striped">
   <thead>
     <th>Nombre Completo</th>
     <th>Asistencia</th>
@@ -21,6 +29,6 @@
   </tbody>
 </table>
 
-<%= f.submit "Guardar" %>
-
+<%= f.submit "Guardar", class: "btn btn-primary" %>
 <% end %>
+<br />
