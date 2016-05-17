@@ -1,0 +1,5 @@
+<ol>
+  <% @course_sessions.each do |course_session|  %>
+    <li><%= link_to course_session.subject, course_session %> (<%= course_session.date %>)</li>
+  <% end %>
+</ol>
