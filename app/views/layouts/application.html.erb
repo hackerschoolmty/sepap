@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Sepap</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sepap</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">HSMTY - SEPAP</a>
+        </div>
+      </div>
+    </nav>
 
-</body>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <%- flash.each do |key, msg| %>
+        <div class="alert alert-<%= key %>">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <%= msg %>
+        </div>
+      <% end %>
+      <div class="container">
+        <h1>¡Bienvenidos!</h1>
+        <p>Esta app es un intento de clon de SEPAP, sistema actual para la toma de asistencia de los profesores al taller impartido por la Hacker School Monterrey.</p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/hackerschoolmty/sepap" role="button">Repositorio</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+        <%= yield %>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2016 Hacker School Monterrey</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  </body>
 </html>
