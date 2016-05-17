@@ -1,7 +1,59 @@
-<h1>Review de Hacker School</h1>
+<div class="row">
+<% @course_sessions.each do |course_session|  %>
+  <div class="col-md-4">
+    <h2><%= course_session.subject %></h2>
+    <p><em>Fecha: <%= course_session.date %></em></p>
+    <p><%= link_to "Tomar lista &raquo;".html_safe, course_session, role: "button", class: "btn btn-default" %></p>
+  </div>
+<% end %>
+</div>
 
-<ol>
-  <% @course_sessions.each do |course_session|  %>
-    <li><%= link_to course_session.subject, course_session %> (<%= course_session.date %>)</li>
-  <% end %>
-</ol>
+<hr />
+<div class="row">
+  <h2>Temario</h2>
+
+  <p>A continuacion se presenta el desglose del programa para el taller.</p>
+
+  <h3>Jueves (19/Mayo/2016)</h3>
+  <ul>
+    <li>Introducción a git & Github</li>
+    <li>Ruby 101</li>
+    <li>
+      Ruby avanzado
+      <ul>
+        <li>Construyamos un scrapper</li>
+        <li>Rack + Sinatra</li>
+      </ul>
+    </li>
+    <li>MVC</li>
+    <li>
+      Filosofía en Rails
+      <ul>
+        <li>ActiveRecord + ORM</li>
+        <li>Finders on Rails</li>
+      </ul>
+    </li>
+    <li>Arquitectura tipo RESTful</li>
+  </ul>
+
+  <h3>Viernes (20/Mayo/2016)</h3>
+  <ul>
+    <li>Introducción a Test Driven Development</li>
+    <li>Introducción a RSpec</li>
+    <li>
+      Ruby avanzado
+      <ul>
+        <li>* Sistema SEPAP(Asistencia de alumnos)</li>
+      </ul>
+    </li>
+    <li>RSpec & Rails</li>
+    <li>Estructura de un web service</li>
+    <li>API's /webservices - Versionamiento</li>
+  </ul>
+
+  <h3>Sábado (21/Mayo/2016)</h3>
+  <ul>
+    <li>Administración de usuarios</li>
+    <li>Patrones de diseño en Rails</li>
+  </ul>
+</div>
