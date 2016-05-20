@@ -11,7 +11,7 @@ class Api::V1::StudentsController < Api::V1::BaseController
   def create
     student = Student.new(student_params)
     if student.save
-      render json: student
+      render json: student, status: 201
     else
       render json: student.errors
     end
