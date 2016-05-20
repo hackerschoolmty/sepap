@@ -31,7 +31,15 @@ RSpec.describe Api::V1::StudentsController, :type => :controller do
       post :create, { student: { name: "Abraham" } }
       expect(json_response[:student][:name]).to eql "Abraham"
     end
+  end
 
+  describe "PUT/PATCH #update" do
+
+    it "responds with the updated json version of the student" do
+      student = FactoryGirl.create :student, name: "Lorena"
+      patch :update, { id: student.id, student: { name: "Yolanda" } }
+      expect(json_response[:student][:name]).to eql "Yolanda"
+    end
   end
 
 end
